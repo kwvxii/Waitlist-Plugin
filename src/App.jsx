@@ -35,7 +35,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/Waitlist-Plugin/">
       {loading ? (
         <Motion.div
           key="loader"
