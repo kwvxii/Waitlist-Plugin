@@ -1,0 +1,57 @@
+/* src/pages/ThankYou.css */
+
+.thankyou-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #080808;
+  color: #F7F4F3;
+  text-align: center;
+  padding: 2rem;
+}
+
+.thankyou-container h1 {
+  color: #E4A425;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.thankyou-container p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  max-width: 400px;
+}
+
+.countdown {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #e4a425;
+}
+
+.share-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.share-buttons a,
+.share-buttons button {
+  padding: 12px 16px;
+  background-color: #E4A425;
+  color: #080808;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.share-buttons button:hover,
+.share-buttons a:hover {
+  background-color: #d08d1f;
+}

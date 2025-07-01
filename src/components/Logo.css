@@ -1,0 +1,49 @@
+/* src/components/Logo.css */
+
+.logo-wrapper {
+  position: absolute;
+
+  z-index: 10;
+  width: 7%;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+/* 🔽 MOBILE: Up to 767px */
+@media screen and (max-width: 767px) {
+  .logo {
+    width: 80px;
+  }
+
+  .logo-wrapper {
+    left: 1rem;
+    top: 0.5rem;
+  }
+}
+
+/* 🔼 TABLET: 768px to 1023px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .logo {
+    width: 85px;
+  }
+
+  .logo-wrapper {
+    left: 1.2rem;
+    top: 0.3rem;
+  }
+}
+
+/* 🖥️ DESKTOP: 1024px and up */
+@media screen and (min-width: 1024px) {
+  .logo {
+    width: 100px;
+  }
+
+  .logo-wrapper {
+    left: 1.5rem;
+    top: 0.1rem;
+  }
+}
