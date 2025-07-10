@@ -1,0 +1,53 @@
+/* src/components/CountdownTimer.css */
+
+.countdown-container {
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.countdown {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.time-box {
+  background-color: #1a1a1a;
+  border: 2px solid #E4A425;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  text-align: center;
+  min-width: 90px;
+  box-shadow: 0 0 12px rgba(228, 164, 37, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.time-box:hover {
+  transform: scale(1.05);
+}
+
+.time-box span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #E4A425;
+  margin-bottom: 0.3rem;
+  font-family: 'Outfit', sans-serif;
+}
+
+.time-box::after {
+  content: attr(data-label);
+  font-size: 0.9rem;
+  color: #F7F4F3;
+}
+
+.launched-text {
+  font-size: 1.5rem;
+  color: #FFD700;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}

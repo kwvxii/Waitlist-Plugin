@@ -1,47 +1,31 @@
 // src/pages/ThankYou.jsx
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { motion as Motion } from "framer-motion";
+import CountdownTimer from "../components/CountDownTimer.jsx";
+
+import Footer from "../components/Footer.jsx";
 import "./ThankYou.css";
 
 function ThankYou() {
-  const [timeLeft, setTimeLeft] = useState(10); // 10 second countdown
-
-  useEffect(() => {
-    if (timeLeft === 0) return;
-
-    const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
-    return () => clearTimeout(timer);
-  }, [timeLeft]);
-
   return (
-    <div className="thankyou-container">
-      <h1>🎉 You’re on the Waitlist!</h1>
-      <p>Thank you for signing up. Help us spread the word.</p>
+    <div className="thankyou-page">
+      <Motion.div
+        className="thankyou-content"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <h1 className="thankyou-heading">🎉 You’re officially on the list!</h1>
+        <p className="thankyou-sub">
+          Invite friends and stay plugged in for exclusive Plugin rewards.
+        </p>
 
-      <div className="countdown">
-        {timeLeft > 0 ? `⏳ ${timeLeft} seconds left...` : "🔥 You're all set!"}
-      </div>
+        <CountdownTimer targetDate="2025-08-30T00:00:00" />
 
-      <div className="share-buttons">
-        <a
-          href={`https://wa.me/?text=Plugin is launching soon. Be among the first to know!`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          📲 Share on WhatsApp
-        </a>
+        <SocialButtons />
+      </Motion.div>
 
-        <a
-          href="https://www.instagram.com/pluginafrica"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          📸 Share to Instagram
-        </a>
-
-        <button onClick={() => alert("Thanks for sharing!")}>
-          🔗 Copy Plugin Website
-        </button>
-      </div>
+      <Footer />
     </div>
   );
 }
